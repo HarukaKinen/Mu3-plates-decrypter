@@ -1,4 +1,4 @@
-# SDDT-plates-decrypter
+# Plates Decrypter for Mu3
 
 ## Usage
 
