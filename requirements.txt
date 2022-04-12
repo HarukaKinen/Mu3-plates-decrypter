@@ -1,0 +1,4 @@
+
+numpy==1.21.4
+opencv-python==4.5.5.64
+pyinstaller==4.10
