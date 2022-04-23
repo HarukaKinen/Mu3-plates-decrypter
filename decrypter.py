@@ -41,9 +41,15 @@ for filename in os.listdir(os.getcwd()):
         f.seek(0)
 
         # 读取 YUV 通道并重写为相同长宽的 numpy 数组（行列式）
-        y = np.frombuffer(f.read(y.size), dtype=np.uint8).reshape((y.shape[0], y.shape[1]))  # Read Y color channel and reshape to height x width numpy array
-        u = np.frombuffer(f.read(y.size), dtype=np.uint8).reshape((y.shape[0], y.shape[1]))  # Read U color channel and reshape to height x width numpy array
-        v = np.frombuffer(f.read(y.size), dtype=np.uint8).reshape((y.shape[0], y.shape[1]))  # Read V color channel and reshape to height x width numpy array
+        # Read Y color channel and reshape to height x width numpy array
+        y = np.frombuffer(f.read(y.size), dtype=np.uint8).reshape(
+            (y.shape[0], y.shape[1]))
+        # Read U color channel and reshape to height x width numpy array
+        u = np.frombuffer(f.read(y.size), dtype=np.uint8).reshape(
+            (y.shape[0], y.shape[1]))
+        # Read V color channel and reshape to height x width numpy array
+        v = np.frombuffer(f.read(y.size), dtype=np.uint8).reshape(
+            (y.shape[0], y.shape[1]))
 
         yvu = cv2.merge((y, v, u))
 
