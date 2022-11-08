@@ -6,4 +6,8 @@ Place the `.exe` file under the `.png` file that needs to be decrypted and open 
 
 ## Build
 
-Run `pyinstaller decrypter.py -i "icon.ico" --onefile`, the executable file will compiled in the `dist` folder.
+Run command below in folder, the executable file will compiled in the `dist` folder.
+
+```batch
+pyinstaller decrypter.py -i "icon.ico" --onefile
+```
